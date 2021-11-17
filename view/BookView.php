@@ -1,7 +1,7 @@
 <?php
     class BookView{
         public function showAllBook($posts){
-          require_once('template/book.php');
+          require_once('./public/template/book.php');
         }
     }
 
