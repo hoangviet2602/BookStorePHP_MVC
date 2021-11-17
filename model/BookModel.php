@@ -1,12 +1,7 @@
 <?php
     class BookModel{
         public function getPost(){
-            $con = mysqli_connect('localhost','root','','bansach2');
-            mysqli_set_charset($con,'utf-8');
-
-            if(mysqli_connect_errno()){
-                echo 'Connect error: ' .mysqli_connect_error();
-            }
+            include('connect.php');
 
             $result = $con -> query('SELECT * FROM books');
 
