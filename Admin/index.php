@@ -70,7 +70,7 @@ session_start();
         default:
         if($mod = 'danhmmuc')
             header('location: ?mod=danhmuc');
-            else
+         elseif($mod ='sanpham')
             header('location: ?mod=sanpham');
             // require_once('MVC/controllers/LoginController.php');
             // $controller_obj = new LoginController();
