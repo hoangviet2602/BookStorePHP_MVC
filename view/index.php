@@ -43,7 +43,7 @@
 <body>
     <!-- header section start -->
     <?php
-    //require_once("header_footer/header.php")
+   // require_once("header_footer/header.php")
     ?>
     <!-- header section end -->
 
