@@ -20,11 +20,28 @@
 
 <div class="d-flex p-3 bg-warning text-white" style="margin: 20px 0px 20px 0px">  
     <div class="p-2 bg-success">Danh Mục Sách</div>
-</div>
-
     
 
+
+
+
+        <a href="?act=taikhoan&xuli=dangxuat">Đăng xuất</a>
+       
+
+
+    <?php  if ((isset($_SESSION['isLogin_Admin'])  == true)) : ?>
+      
+        <h2> Xin chào admin </h2>
+    <?php elseif((isset($_SESSION['isLogin'])  == true)) : ?>
+                 <h2> Xin chào  </h2>
+    <?php else : ?>
+          <a href="?act=taikhoan">Đăng nhập</a>
+    <?php endif ?>
+      
    
+     
+    
+</div>
                     <div class="container" style="margin-top:20px ">
                     <?php         
                 foreach($posts as $post ) :  ?>
