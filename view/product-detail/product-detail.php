@@ -98,7 +98,7 @@
                             <li><a data-toggle="tab" href="#reviews">Đánh giá</a></li>
                         </ul>
                         <div class="tab-content">
-                            <?php if ($data['categoryid'] == 1) { ?>
+                          
                                 <div class="info-reviews moreinfo tab-pane fade in active" id="moreinfo">
                                     <div class="tb">
                                         <h5>Thông tin sách </h5>
@@ -158,4 +158,4 @@
     <!-- product-details section end -->
     <!-- related-products section start -->
    
-<?php } 
+
