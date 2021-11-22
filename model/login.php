@@ -37,7 +37,6 @@ class Login extends Model
        
         if(isset($_SESSION['isLogin_Admin'])){
             unset($_SESSION['isLogin_Admin']);
-
             unset($_SESSION['login']);
         }
       
@@ -45,7 +44,7 @@ class Login extends Model
             unset($_SESSION['isLogin']);
             unset($_SESSION['login']);
         }
-        header('location: ?act=home1');
+        header('location: ?act=home');
     }
     function check_account()
     {

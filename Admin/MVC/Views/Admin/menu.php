@@ -20,7 +20,14 @@
   Chức năng
 </div>
 
-
+<!-- Nav Item - Charts -->
+<?php if (isset($_SESSION['isLogin_Admin']) && $_SESSION['isLogin_Admin'] == true) { ?>
+<li class="nav-item">
+  <a class="nav-link" href="?mod=nguoidung">
+    <i class="fas fa-fw fa-table"></i>
+    <span>Quản lý Tài khoản</span></a>
+</li>
+<?php } ?>
 <!-- Nav Item - Tables -->
 <li class="nav-item">
   <a class="nav-link" href="?mod=sanpham">

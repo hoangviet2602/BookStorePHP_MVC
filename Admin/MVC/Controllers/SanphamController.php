@@ -5,7 +5,7 @@ class SanphamController
     var $sanpham_model;
     public function __construct()
     {
-        $this->sanpham_model = new sanpham();
+      $this->sanpham_model = new sanpham();
     }
     public function list()
     {

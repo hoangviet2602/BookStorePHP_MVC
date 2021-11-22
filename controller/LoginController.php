@@ -7,12 +7,9 @@ class LoginController
     {
         $this->login_model = new Login();
     }
+    
     function login()
     {
-       
-
-        
-
         require_once('view/index.php');
     }
     function login_action()

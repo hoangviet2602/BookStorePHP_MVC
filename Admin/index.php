@@ -34,8 +34,7 @@ session_start();
                     break;
             }
             break;
-            case 'danhmuc':
-               
+            case 'danhmuc':         
                 require_once('MVC/controllers/DanhmucController.php');
                 $controller_obj = new DanhmucController();
                 switch ($act) { 
@@ -65,13 +64,46 @@ session_start();
                         break;
                 }
                 break;
+                case 'nguoidung':
+                    require_once('MVC/controllers/NguoiDungController.php');
+                    $controller_obj = new NguoiDungController();
+                    switch ($act) {
+                        case 'list':
+                            $controller_obj->list();
+                            break;
+                        case 'detail':
+                            $controller_obj->detail();
+                            break;
+                        case 'add':
+                            $controller_obj->add();
+                            break;
+                        case 'store':
+                            $controller_obj->store();
+                            break;
+                        case 'delete':
+                            $controller_obj->delete();
+                            break;
+                        case 'edit':
+                            $controller_obj->edit();
+                            break;
+                        case 'update':
+                            $controller_obj->update();
+                            break;
+                        default:
+                            $controller_obj->list();
+                            break;
+                    }
+                    break;             
         
             
         default:
         if($mod = 'danhmmuc')
             header('location: ?mod=danhmuc');
-         elseif($mod ='sanpham')
+        else
             header('location: ?mod=sanpham');
+      
+        
+      
             // require_once('MVC/controllers/LoginController.php');
             // $controller_obj = new LoginController();
             // $controller_obj->admin();

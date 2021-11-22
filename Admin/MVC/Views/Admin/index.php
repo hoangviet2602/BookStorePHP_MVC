@@ -84,6 +84,25 @@
                           break;
                       }
                       break;
+                      case 'nguoidung':
+                        switch ($act) {
+                          case 'list':
+                            require_once('MVC/views/nguoidung/list.php');
+                            break;
+                          case 'add':
+                            require_once('MVC/views/nguoidung/add.php');
+                            break;
+                          case 'detail':
+                            require_once('MVC/views/nguoidung/detail.php');
+                            break;
+                          case 'edit':
+                            require_once('MVC/views/nguoidung/edit.php');
+                            break;
+                          default:
+                            require_once('MVC/views/nguoidung/list.php');
+                            break;
+                        }
+                        break;
                    
                     case 'danhmuc':
                       switch ($act) {
