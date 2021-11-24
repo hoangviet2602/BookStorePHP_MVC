@@ -10,7 +10,7 @@
     <!-- favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="public/img/icon.png">
 
-    <link rel="apple-touch-icon" href="public/apple-touch-icon.png">
+    <link rel="/apple-touch-icon" href="public/apple-touch-icon.png">
     <!-- Place icon.png in the root directory -->
     <!-- google fonts -->
     <link href='https://fonts.googleapis.com/css?family=Lato:400,900,700,300' rel='stylesheet' type='text/css'>
@@ -43,7 +43,7 @@
 <body>
     <!-- header section start -->
     <?php
-   // require_once("header_footer/header.php")
+    require_once("header_footer/header.php")
     ?>
     <!-- header section end -->
 

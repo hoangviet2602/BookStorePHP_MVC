@@ -13,10 +13,33 @@
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+      <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <!-- animate css -->
+    <link rel="stylesheet" href="public/css/animate.css">
+    <!-- pe-icon-7-stroke -->
+    <link rel="stylesheet" href="public/css/materialdesignicons.min.css">
+    <!-- pe-icon-7-stroke -->
+    <link rel="stylesheet" href="public/css/jquery.simpleLens.css">
+    <!-- jquery-ui.min css -->
+    <link rel="stylesheet" href="public/css/jquery-ui.min.css">
+    <!-- meanmenu css -->
+    <link rel="stylesheet" href="public/css/meanmenu.min.css">
+    <!-- nivo.slider css -->
+    <link rel="stylesheet" href="public/css/nivo-slider.css">
+    <!-- owl.carousel css -->
+    <link rel="stylesheet" href="public/css/owl.carousel.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="public/style.css">
+    <!-- responsive css -->
+    <link rel="stylesheet" href="public/css/responsive.css">
+    <!-- modernizr js -->
+    <script src="public/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
 <body>
-    
+<?php
+    require_once("./view/header_footer/header.php")
+    ?>
 
 <div class="d-flex p-3 bg-warning text-white" style="margin: 20px 0px 20px 0px">  
     <div class="p-2 bg-success">Danh Mục Sách</div>

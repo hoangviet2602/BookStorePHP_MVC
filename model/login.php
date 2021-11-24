@@ -13,7 +13,7 @@ class Login extends Model
         $query = "SELECT * from users  WHERE username = '" . $data['username'] . "' AND password = '" . $data['password'] . "' AND isdisable = 0";
 
         $login = $this->conn->query($query)->fetch_assoc();
-        if ($login !== NULL) {
+        if ($login != NULL) {
             if($login['isadmin'] == 1){
                 $_SESSION['isLogin_Admin'] = true;
                 $_SESSION['login'] = $login;
@@ -54,59 +54,7 @@ class Login extends Model
 
         return $data;
     }
-    function dangky_action($data, $check1, $check2)
-    {
-        if ($check1 == 0) {
-            if ($check2 == 0) {
-                $f = "";
-                $v = "";
-                foreach ($data as $key => $value) {
-                    $f .= $key . ",";
-                    $v .= "'" . $value . "',";
-                }
-                $f = trim($f, ",");
-                $v = trim($v, ",");
-                $query = "INSERT INTO NguoiDung($f) VALUES ($v);";
-
-                $status = $this->conn->query($query);
-                if ($status == true) {
-                    setcookie('msg', 'Đăng ký thành công', time() + 2);
-                } else {
-                    setcookie('msg', 'Đăng ký không thành công', time() + 2);
-                }
-            } else {
-                setcookie('msg', 'Mật khẩu không trùng nhau', time() + 2);
-            }
-        } else {
-            setcookie('msg', 'Tên tài khoản hoặc Email  đã tồn tại', time() + 2);
-        }
-        header('Location: ?act=taikhoan#dangky');
-    }
-    function account()
-    {
-        $id = $_SESSION['login']['MaND'];
-        return $this->conn->query("SELECT * from NguoiDung where MaND = $id")->fetch_assoc();
-    }
-    function update_account($data)
-    {
-        $v = "";
-        foreach ($data as $key => $value) {
-            $v .= $key . "='" . $value . "',";
-        }
-        $v = trim($v, ",");
-
-        $query = "UPDATE NguoiDung SET  $v   WHERE  MaND = " . $_SESSION['login']['MaND'];
-
-        $result = $this->conn->query($query);
-        
-        if ($result == true) {
-            setcookie('doimk', 'Cập nhật tài khoản thành công', time() + 2);
-            header('Location: ?act=taikhoan&xuli=account#doitk');
-        } else {
-            setcookie('doimk', 'Mật khẩu xác nhận không đúng', time() + 2);
-            header('Location: ?act=taikhoan&xuli=account#doitk');
-        }
-    }
+  
     function error()
     {
         header('location: ?act=errors');
