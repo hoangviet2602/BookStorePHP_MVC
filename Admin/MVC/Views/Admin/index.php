@@ -103,7 +103,20 @@
                             break;
                         }
                         break;
-                   
+                        case 'hoadon':
+                          switch ($act) {
+                            case 'list':
+                              require_once('MVC/Views/hoadon/list.php');
+                              break;
+                            case 'chitiet':
+                              require_once('MVC/Views/hoadon/detail.php');
+                              break;
+                            default:
+                              require_once('MVC/Views/hoadon/list.php');
+                              break;
+                          }
+                          break;
+                          
                     case 'danhmuc':
                       switch ($act) {
                         case 'list':
