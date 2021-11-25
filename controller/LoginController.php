@@ -28,6 +28,7 @@ class LoginController
     }
     function dangxuat()
     {
+        
         $this->login_model->logout();
     }
 }

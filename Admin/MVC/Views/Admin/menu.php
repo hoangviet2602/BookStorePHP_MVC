@@ -40,6 +40,11 @@
     <i class="fas fa-fw fa-table"></i>
     <span>Quản lý danh mục sản phẩm</span></a>
 </li>
+<li class="nav-item">
+  <a class="nav-link" href="?mod=hoadon">
+    <i class="fas fa-fw fa-table"></i>
+    <span>Xét duyệt hóa đơn</span></a>
+</li>
 
 
 

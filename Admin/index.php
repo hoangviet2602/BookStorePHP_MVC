@@ -64,6 +64,30 @@ session_start();
                         break;
                 }
                 break;
+                case 'hoadon':
+                    require_once('MVC/controllers/HoadonController.php');
+                    $controller_obj = new HoadonController();
+                    switch ($act) {
+                        case 'list':
+                            $controller_obj->list();
+                            break;
+                        case 'chitiet':
+                            $controller_obj->chitiet();
+                            break;
+                        case 'delete':
+                            $controller_obj->delete();
+                            break;
+                        case 'xetduyet':
+                            $controller_obj->xetduyet();
+                            break;
+                            case 'tuchoi':
+                                $controller_obj->tuchoi();
+                                break;
+                        default:
+                            $controller_obj->list();
+                            break;
+                    }
+                    break;
                 case 'nguoidung':
                     require_once('MVC/controllers/NguoiDungController.php');
                     $controller_obj = new NguoiDungController();
