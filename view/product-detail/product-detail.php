@@ -71,15 +71,18 @@
                                 </div>
                                 <h5><?=number_format($data['price'])?> VNĐ</h5>
                                 <h3>Tác giả: <?=($data_tg['authorname'])?> </h3>
-                                    </br>
-                                <?php if ($data['categoryid'] == 1) { ?>
-                                    <p><?= $data['bookdescription'] ?></p>
-                                <?php }?>
+                                    </br>  
+                                    <p><?= $data['bookdescription'] ?></p>                             
                                 <div class="list-btn">
-                                    <a href="?act=cart&xuli=add&id=<?=$data['MaSP']?>">Thêm vào giỏ</a>
-                                    <?php if ($data['categoryid'] == 1) { ?>
+                                <?php if ($data['quantity'] > 1){ ?>
+                                    <a href="?act=cart&xuli=add&id=<?=$data['bookid']?>">Thêm vào giỏ</a>
+                                    <?php }else { ?>
+                                    <a href="">Hết hàng</a>
+                                <?php } ?>
+                                  
+                                   
                                     <a href="#info">Chi tiết</a>
-                                    <?php }?>
+                                  
                                 </div>
                             </div>
                         </div>
