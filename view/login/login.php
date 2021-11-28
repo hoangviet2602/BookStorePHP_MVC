@@ -56,12 +56,11 @@
 					<?php } ?>
 					<div class="custom-input">
 						<form action="?act=taikhoan&xuli=dangky" method="post" id="form2">
-							<input type="text" name="Ho" placeholder="Họ.." required />
-							<input type="text" name="Ten" placeholder="Tên.." required />
-							<input type="text" name="TaiKhoan" placeholder="Tên tài khoản đăng nhập.." required  minlength="6"/>
-							<input type="email" name="Email" placeholder="Địa chỉ Email.." required />
-							<input type="text" name="SĐT" placeholder="Số điện thoại.." required pattern="[0-9]+" minlength="10" />
-							<input type="password" name="MatKhau" placeholder="Mật khẩu" minlength="6" required />
+							<input type="text" name="fullname" placeholder="Họ và tên" required />
+							<input type="text" name="username" placeholder="Tên tài khoản đăng nhập.." required  minlength="6"/>
+							<input type="email" name="email" placeholder="Địa chỉ Email.." required />
+							<input type="text" name="phone" placeholder="Số điện thoại.." required pattern="[0-9]+" minlength="10" />
+							<input type="password" name="password" placeholder="Mật khẩu" minlength="6" required />
 							<input type="password" name="check_password" placeholder="Xác nhận mật khẩu" minlength="6" required />
 							<div class="submit-text coupon">
 								<button type="submit" form="form2">Đăng ký</button>
