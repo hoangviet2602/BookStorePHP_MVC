@@ -36,9 +36,11 @@ switch ($mod) {
                  case 'dangxuat':
                         $controller_obj->dangxuat();
                         break;
-                        case 'dangky':
-                            $controller_obj->dangky();
-                            break;
+                 
+                case 'dangky':
+                        $controller_obj->dangky();
+                        break;
+               
                  
                 default:
                     $controller_obj->login();

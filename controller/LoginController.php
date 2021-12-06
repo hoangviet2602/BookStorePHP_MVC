@@ -32,33 +32,37 @@ class LoginController
         
         $this->login_model->logout();
     }
-    function dangky()
-    {
-        $check1 = 0;
-        $check2 = 0;
+
+    function dangky(){
+        $check1 = 0; //check trung ten va email
+        $check2 = 0;//check mat khau giong nhau
         $data_check = $this->login_model->check_account();
+
+        //kiểm tra email và tài khoản đã tồn tại chưa
         foreach ($data_check as $value) {
             if ($value['email'] == $_POST['email'] || $value['username'] == $_POST['username']) {
                 $check1 = 1;
             }
         }
-
+        //kiểm tra password nhập lại có đúng không
         if ($_POST['password'] != $_POST['check_password']) {
             $check2 = 1;
         }
-
+        
+        //tạo mảng chứa dữ liệu nhập vào
         $data = array(
-            'password' =>    md5($_POST['password']),
-            'username' =>    $_POST['username'],
-            'isadmin'  =>   '0',
+            'password' => md5($_POST['password']),
+            'username' => $_POST['username'], 
+            'isadmin' =>  '0',
             'isdisable' => '0',
             'fullname' => $_POST['fullname'],
-            'phone' =>    $_POST['phone'],
-            'email' => $_POST['email'],
+            'phone' => $_POST['phone'],
+            'email' =>    $_POST['email'],
             'male' => '1',
-            'address' =>  "",
-            'dob'  =>  "",
+            'address' => "",
+            'dob' => "",
         );
+
         foreach ($data as $key => $value) {
             if (strpos($value, "'") != false) {
                 $value = str_replace("'", "\'", $value);

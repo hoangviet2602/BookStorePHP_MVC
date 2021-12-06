@@ -56,8 +56,7 @@
 					<?php } ?>
 					<div class="custom-input">
 						<form action="?act=taikhoan&xuli=dangky" method="post" id="form2">
-							
-							<input type="text" name="fullname" placeholder="Tên.." required />
+							<input type="text" name="fullname" placeholder="Họ và tên" required />
 							<input type="text" name="username" placeholder="Tên tài khoản đăng nhập.." required  minlength="6"/>
 							<input type="email" name="email" placeholder="Địa chỉ Email.." required />
 							<input type="text" name="phone" placeholder="Số điện thoại.." required pattern="[0-9]+" minlength="10" />
