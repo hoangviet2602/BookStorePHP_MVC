@@ -26,9 +26,46 @@ class LoginController
         );
         $this->login_model->login_action($data);
     }
+    
     function dangxuat()
     {
         
         $this->login_model->logout();
+    }
+    function dangky()
+    {
+        $check1 = 0;
+        $check2 = 0;
+        $data_check = $this->login_model->check_account();
+        foreach ($data_check as $value) {
+            if ($value['email'] == $_POST['email'] || $value['username'] == $_POST['username']) {
+                $check1 = 1;
+            }
+        }
+
+        if ($_POST['password'] != $_POST['check_password']) {
+            $check2 = 1;
+        }
+
+        $data = array(
+            'password' =>    md5($_POST['password']),
+            'username' =>    $_POST['username'],
+            'isadmin'  =>   '0',
+            'isdisable' => '0',
+            'fullname' => $_POST['fullname'],
+            'phone' =>    $_POST['phone'],
+            'email' => $_POST['email'],
+            'male' => '1',
+            'address' =>  "",
+            'dob'  =>  "",
+        );
+        foreach ($data as $key => $value) {
+            if (strpos($value, "'") != false) {
+                $value = str_replace("'", "\'", $value);
+                $data[$key] = $value;
+            }
+        }
+
+        $this->login_model->dangky_action($data, $check1, $check2);
     }
 }

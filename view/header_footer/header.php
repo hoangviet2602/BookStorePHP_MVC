@@ -1,3 +1,15 @@
+<link rel="stylesheet" href="./public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./public/css/animate.css">
+    <link rel="stylesheet" href="./public/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="./public/css/jquery.simpleLens.css">
+    <link rel="stylesheet" href="./public/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="./public/css/meanmenu.min.css">
+    <link rel="stylesheet" href="./public/css/nivo-slider.css">
+    <link rel="stylesheet" href="./public/css/owl.carousel.css">
+    <link rel="stylesheet" href="./public/style.css">
+    <link rel="stylesheet" href="./public/css/responsive.css">
+    <script src="./public/js/vendor/modernizr-2.8.3.min.js"></script>
+
 <header class="header-one header-two">
     <div class="header-top-two">
         <div class="container text-center">
@@ -42,16 +54,17 @@
         <div class="row">
             <div class="col-sm-2">
                 <div class="logo">
-                    <a href="?act=home"><img src="public/img/logo.png" alt="Sellshop" /></a>
+                <a href="?act=home"  style="margin-left: 50px "><img src="./public/img/Capture.PNG" alt="Sellshop" /></a>
                 </div>
             </div>
             <div class="col-sm-8">
                 <div class="header-middel">
                     <div class="mainmenu">
                         <nav>
-                            <ul>
-                                <li><a href="?act=home">Trang chủ</a></li>
-                                <li><a href="?act=shop">Cửa Hàng</a>
+                            <ul style="margin-left:-40px ">
+                            <li><a href= style="color : white " >.</a></li>
+                                <li><a href="?act=home" >Trang chủ</a></li>
+                                <li><a href="?act=category">Danh Mục</a>
                                 </li>
                                 <li>
                                     <a href="?act=checkout">Thanh Toán</a>
@@ -60,26 +73,7 @@
                                 <li><a href="?act=contact">Liên hệ</a></li>
                             </ul>
                         </nav>
-                    </div>
-                    <!-- mobile menu start -->
-                    <div class="mobile-menu-area">
-                        <div class="mobile-menu">
-                            <nav id="dropdown">
-                                <ul>
-                                    <li><a href="?act=home">Trang chủ</a>
-                                    </li>
-                                    <li>
-                                        <a href="?act=shop">Cửa hàng</a>
-                                    </li>
-                                    <li>
-                                        <a href="?act=checkout">Thanh Toán</a>
-                                    </li>
-                                    <li><a href="?act=about">Giới thiệu</a></li>
-                                    <li><a href="?act=contac">Liên hệ</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
+                    </div>              
                 </div>
             </div>
             <div class="col-sm-2">
@@ -95,7 +89,7 @@
                             }}
                         ?>
                         <i class="mdi mdi-cart"></i>
-                        <?=$soluong?> SP : <strong><?=number_format($thanhtien)?> VNĐ</strong>
+                         <strong><?=number_format($thanhtien)?> VNĐ</strong>
                     </a>
                     <div class="cartdrop">
                         <?php if(isset($_SESSION['sanpham'])){
@@ -122,4 +116,28 @@
             </div>
         </div>
     </div>
+    <section class="duoinavbar">
+        <div class="container text-white">
+            <div class="row justify">
+                <div class="col-md-3">
+                    <div class="categoryheader">
+                        <div class="noidungheader text-white">
+                            <i class="fa fa-bars"></i>
+                            <span class="text-uppercase font-weight-bold ml-1">Danh mục sách</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="benphai float-right">
+                        <div class="hotline">
+                            <i class="fa fa-phone"></i>
+                            <span>Hotline:<b>1900 1999</b> </span>
+                        </div>
+                        <i class="fas fa-comments-dollar"></i>
+                        <a href="#">Hỗ trợ trực tuyến </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </header>

@@ -7,6 +7,7 @@ switch ($mod) {
         require_once('controller/BookController.php');
         $postController = new   BookController();
         $postController->getPost();
+        
         break;
     
     
@@ -15,6 +16,11 @@ switch ($mod) {
         $controller_obj = new DetailController();
         $controller_obj->list();
         break;
+        case 'category1':
+            require_once('controller/CategoryController.php');
+            $controller_obj = new CategoryController();
+            $controller_obj->list();
+            break;   
     
     case 'taikhoan':
         $act = isset($_GET['xuli']) ? $_GET['xuli'] : "taikhoan";
@@ -30,7 +36,9 @@ switch ($mod) {
                  case 'dangxuat':
                         $controller_obj->dangxuat();
                         break;
-               
+                        case 'dangky':
+                            $controller_obj->dangky();
+                            break;
                  
                 default:
                     $controller_obj->login();
@@ -83,9 +91,8 @@ switch ($mod) {
                     }
                     break;                        
     default:
-        require_once('controller/BookController.php');
-        $controller_obj = new Bookcontroller();
-        $controller_obj->getPost();
+        require_once('view/shop/shop.php');
+     
         break;
 }
 ?>

@@ -2,42 +2,31 @@
 <html class="no-js" lang="vi-vn">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>BookStore</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="public/img/icon.png">
+<meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
-    <link rel="/apple-touch-icon" href="public/apple-touch-icon.png">
-    <!-- Place icon.png in the root directory -->
-    <!-- google fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Lato:400,900,700,300' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
-    <!-- all css here -->
-    <!-- bootstrap v3.3.6 css -->
-    <link rel="stylesheet" href="public/css/bootstrap.min.css">
-    <!-- animate css -->
-    <link rel="stylesheet" href="public/css/animate.css">
-    <!-- pe-icon-7-stroke -->
-    <link rel="stylesheet" href="public/css/materialdesignicons.min.css">
-    <!-- pe-icon-7-stroke -->
-    <link rel="stylesheet" href="public/css/jquery.simpleLens.css">
-    <!-- jquery-ui.min css -->
-    <link rel="stylesheet" href="public/css/jquery-ui.min.css">
-    <!-- meanmenu css -->
-    <link rel="stylesheet" href="public/css/meanmenu.min.css">
-    <!-- nivo.slider css -->
-    <link rel="stylesheet" href="public/css/nivo-slider.css">
-    <!-- owl.carousel css -->
-    <link rel="stylesheet" href="public/css/owl.carousel.css">
-    <!-- style css -->
-    <link rel="stylesheet" href="public/style.css">
-    <!-- responsive css -->
-    <link rel="stylesheet" href="public/css/responsive.css">
-    <!-- modernizr js -->
-    <script src="public/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="public/css/home.css">
+    <script type="text/javascript" src="public/js/main1.js"></script>
+    <link rel="stylesheet" href="public/fonts/fontawesome_free_5.13.0/css/all.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    
+    
+    <link rel="stylesheet" type="text/css" href="public/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="public/slick/slick-theme.css" />
+    <script type="text/javascript" src="public/slick/slick.min.js"></script>
+    <script type="text/javascript"
+        src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+    <link rel="canonical" href="http://dealbook.xyz/">
+    <meta name="google-site-verification" content="urDZLDaX8wQZ_-x8ztGIyHqwUQh2KRHvH9FhfoGtiEw" />
+    <style>img[alt="www.000webhost.com"]{display: none;}</style>
+
+   
+   
+    
 </head>
 
 <body>
@@ -55,7 +44,7 @@
 
     <!-- footer section start -->
     <?php
-    //require_once("header_footer/footer.php")
+    require_once("header_footer/footer.php")
     ?>
     <!-- footer section end -->
     <!-- all js here -->

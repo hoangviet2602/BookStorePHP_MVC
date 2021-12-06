@@ -291,6 +291,7 @@ label.error {
 .categorycontent > ul > li:hover{
     background-color: #CF111A;
     cursor: pointer;
+    
 }
 
 .categorycontent > ul > li:hover > a{

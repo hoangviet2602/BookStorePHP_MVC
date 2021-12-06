@@ -126,7 +126,7 @@ class SanphamController
             }
         }
         if ($HinhAnh1 == "") {
-            unset($data['HinhAnh1']);
+            unset($data['bookimageurl']);
         }
        
         $this->sanpham_model->update($data);

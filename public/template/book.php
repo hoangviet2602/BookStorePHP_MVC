@@ -3,89 +3,283 @@
 
 <head>
     <title></title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-   
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
-      <link rel="stylesheet" href="public/css/bootstrap.min.css">
-    <!-- animate css -->
-    <link rel="stylesheet" href="public/css/animate.css">
-    <!-- pe-icon-7-stroke -->
-    <link rel="stylesheet" href="public/css/materialdesignicons.min.css">
-    <!-- pe-icon-7-stroke -->
-    <link rel="stylesheet" href="public/css/jquery.simpleLens.css">
-    <!-- jquery-ui.min css -->
-    <link rel="stylesheet" href="public/css/jquery-ui.min.css">
-    <!-- meanmenu css -->
-    <link rel="stylesheet" href="public/css/meanmenu.min.css">
-    <!-- nivo.slider css -->
-    <link rel="stylesheet" href="public/css/nivo-slider.css">
-    <!-- owl.carousel css -->
-    <link rel="stylesheet" href="public/css/owl.carousel.css">
-    <!-- style css -->
-    <link rel="stylesheet" href="public/style.css">
-    <!-- responsive css -->
-    <link rel="stylesheet" href="public/css/responsive.css">
-    <!-- modernizr js -->
-    <script src="public/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="./public/css/home.css">
+    <script type="text/javascript" src="./public/js/main1.js"></script>
+    <link rel="stylesheet" href="./public/fonts/fontawesome_free_5.13.0/css/all.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    
+    
+    <link rel="stylesheet" type="text/css" href="./public/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./public/slick/slick-theme.css" />
+    <script type="text/javascript" src="./public/slick/slick.min.js"></script>
+    <script type="text/javascript"
+        src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+    <link rel="canonical" href="http://dealbook.xyz/">
+    <meta name="google-site-verification" content="urDZLDaX8wQZ_-x8ztGIyHqwUQh2KRHvH9FhfoGtiEw" />
+    <style>img[alt="www.000webhost.com"]{display: none;}</style>
+
+    
+  
 </head>
 
 <body>
 <?php
-    require_once("./view/header_footer/header.php")
+    require_once("view/header_footer/header.php")
+?>
+
+
+    
+    <section class="header bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3" style="margin-right: -15px;">
+                    <!-- CATEGORIES -->
+                    <div class="categorycontent">
+                    <ul>
+                            <?php foreach($category as $item) { ?>
+                               
+                                <li> <a href="?act=category1&id=<?=$item['categoryid']?>"> <?php echo $item['categoryname'] ?></a><li>
+                                
+                            </li>
+                            <?php } ?>
+                            </ul>                
+                       
+                    </div>
+                </div>
+                <!-- banner slider  -->
+                <div class="col-md-9 px-0">
+                    <div id="carouselId" class="carousel slide" data-ride="carousel">
+                        <ol class="nutcarousel carousel-indicators rounded-circle">
+                            <li data-target="#carouselId" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselId" data-slide-to="1"></li>
+                            <li data-target="#carouselId" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <a href="#"><img src="./public/img/banner-sach-moi.jpg" class="img-fluid"
+                                        style="height: 386px;" width="900px" alt="First slide"></a>
+                            </div>
+                            <div class="carousel-item ">
+                                <a href="#"><img src="./public/img/banner-beethoven.jpg" class="img-fluid"
+                                        style="height: 386px;" width="900px" alt="Second slide"></a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="#"><img src="images/neu-toi-biet-duoc-khi-20-full-banner.jpg" class="img-fluid"
+                                        style="height: 386px;" alt="Third slide"></a>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselId" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselId" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>           
+     <!-- khoi sach moi  -->
+     <section class="_1khoi sachmoi bg-white">
+        <div class="container">
+            <div class="noidung" style=" width: 100%;">
+                <div class="row">
+                    <!--header-->
+                    <div class="col-12 d-flex justify-content-between align-items-center pb-2 bg-transparent pt-4">
+                        <h1 class="header text-uppercase" style="font-weight: 400;">SÁCH BÁN CHẠY NHẤT</h1>
+                        <a href="sach-moi-tuyen-chon.html" class="btn btn-warning btn-sm text-white">Xem tất cả</a>
+                    </div>
+                </div>
+                <div class="khoisanpham" style="padding-bottom: 2rem;">
+                    <!-- 1 san pham -->
+                   <?php foreach ($posts as  $post) { ?>  
+                    <div class="card">
+                        <a href="?act=detail&id=<?=$post['bookid']?>" class="motsanpham"
+                            style="text-decoration: none; color: black;" data-toggle="tooltip" data-placement="bottom"
+                            title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
+                            <img class="card-img-top anh" src="public/<?=$post['bookimageurl']?>"
+                                alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                            <div class="card-body noidungsp mt-3">
+                                <h3 class="card-title ten"><?=$post['bookname']?></h3>
+                                <small class="tacgia text-muted">Brian Finch</small>
+                                <div class="gia d-flex align-items-baseline">
+                                    <div class="giamoi"><?=number_format($post['price'])?> ₫</div>
+                                    <div class="giacu text-muted">139.000 ₫</div>
+                                    <div class="sale">-20%</div>
+                                   
+                                </div>
+                                
+                                <div class="danhgia">
+                                    <ul class="d-flex" style="list-style: none;">
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><span class="text-muted">0 nhận xét</span></li>
+                                    </ul>
+                                </div>
+                                <div class="nutmua btn w-100 text-uppercase">
+                                    <a href="?act=cart&xuli=add&id=<?=$post['bookid']?>">Thêm vào giỏ</a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                <?php } ?>     
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </section>           
+     <!-- khoi sach moi  -->
+     <section class="_1khoi sachmoi bg-white">
+        <div class="container">
+            <div class="noidung" style=" width: 100%;">
+                <div class="row">
+                    <!--header-->
+                    <div class="col-12 d-flex justify-content-between align-items-center pb-2 bg-transparent pt-4">
+                        <h1 class="header text-uppercase" style="font-weight: 400;">COMBO SÁCH HOT - GIẢM ĐẾN 25%</h1>
+                        <a href="sach-moi-tuyen-chon.html" class="btn btn-warning btn-sm text-white">Xem tất cả</a>
+                    </div>
+                </div>
+                <div class="khoisanpham" style="padding-bottom: 2rem;">
+                    <!-- 1 san pham -->
+                   <?php foreach ($posts4 as  $post) { ?>  
+                    <div class="card">
+                        <a href="?act=detail&id=<?=$post['bookid']?>" class="motsanpham"
+                            style="text-decoration: none; color: black;" data-toggle="tooltip" data-placement="bottom"
+                            title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
+                            <img class="card-img-top anh" src="public/<?=$post['bookimageurl']?>"
+                                alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                            <div class="card-body noidungsp mt-3">
+                                <h3 class="card-title ten"><?=$post['bookname']?></h3>
+                                <small class="tacgia text-muted">Brian Finch</small>
+                                <div class="gia d-flex align-items-baseline">
+                                    <div class="giamoi"><?=number_format($post['price'])?> ₫</div>
+                                    <div class="giacu text-muted">139.000 ₫</div>
+                                    <div class="sale">-20%</div>   
+                                </div>
+                                <div class="danhgia">
+                                    <ul class="d-flex" style="list-style: none;">
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><span class="text-muted">0 nhận xét</span></li>
+                                    </ul>
+                                </div>
+                                <div class="nutmua btn w-100 text-uppercase">
+                                    <a href="?act=cart&xuli=add&id=<?=$post['bookid']?>">Thêm vào giỏ</a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                <?php } ?>     
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- khoi sach sap phathanh  -->
+    <section class="_1khoi sapphathanh mt-4">
+        <div class="container">
+            <div class="noidung bg-white" style=" width: 100%;">
+                <div class="row">
+                    <!--header-->
+                    <div class="col-12 d-flex justify-content-between align-items-center pb-2 bg-light">
+                        <h2 class="header text-uppercase" style="font-weight: 400;">SÁCH SẮP PHÁT HÀNH / ĐẶT TRƯỚC</h2>
+                        <a href="#" class="btn btn-warning btn-sm text-white">Xem tất cả</a>
+                    </div>
+                </div>
+                <div class="khoisanpham">
+                <?php foreach ($posts3 as  $post) { ?>  
+                    <div class="card">
+                        <a href="?act=detail&id=<?=$post['bookid']?>" class="motsanpham"
+                            style="text-decoration: none; color: black;" data-toggle="tooltip" data-placement="bottom"
+                            title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
+                            <img class="card-img-top anh" src="public/<?=$post['bookimageurl']?>"
+                                alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                            <div class="card-body noidungsp mt-3">
+                                <h3 class="card-title ten"><?=$post['bookname']?></h3>
+                                <small class="tacgia text-muted">Brian Finch</small>
+                                <div class="gia d-flex align-items-baseline">
+                                    <div class="giamoi"><?=number_format($post['price'])?> ₫</div>
+                                    <div class="giacu text-muted">139.000 ₫</div>
+                                    <div class="sale">-20%</div>   
+                                </div>
+                                <div class="danhgia">
+                                    <ul class="d-flex" style="list-style: none;">
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li class="active"><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><span class="text-muted">0 nhận xét</span></li>
+                                    </ul>
+                                </div>             </div>
+                        </a>
+                    </div>
+                <?php } ?>  
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- div _1khoi -- khoi sachnendoc -->
+    <section class="_1khoi sachnendoc bg-white mt-4">
+        <div class="container">
+            <div class="noidung" style=" width: 100%;">
+                <div class="row">
+                    <!--header-->
+                    <div class="col-12 d-flex justify-content-between align-items-center pb-2 bg-transparent pt-4">
+                        <h2 class="header text-uppercase" style="font-weight: 400;">SÁCH HAY NÊN ĐỌC</h2>
+                        <a href="#" class="btn btn-warning btn-sm text-white">Xem tất cả</a>
+                    </div>
+                    <!-- 1 san pham -->
+                  
+                    <?php foreach ($posts2 as  $post) { ?>  
+                        <div class="col-lg col-sm-4">
+                        <div class="card">
+                            <a href="#" class="motsanpham" style="text-decoration: none; color: black;"
+                                data-toggle="tooltip" data-placement="bottom"
+                                title="Từng bước chân nở hoa: Khi câu kinh bước tới">
+                                <img class="card-img-top anh" src="public/<?=$post['bookimageurl']?>"
+                                    alt="tung-buoc-chan-no-hoa">
+                                <div class="card-body noidungsp mt-3">
+                                    <h3 class="card-title ten"><?=$post['bookname']?></h3>
+                                    <small class="thoigian text-muted"><?=$post['releasedate']?></small>
+                                    <div><a class="detail" href="#">Xem chi tiết</a></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                <?php } ?>  
+                </div>
+            </div>
+            <hr>
+        </div>
+    </section>
+   
+
+              
+    <?php
+    require_once("view/header_footer/footer.php")
     ?>
 
-<div class="d-flex p-3 bg-warning text-white" style="margin: 20px 0px 20px 0px">  
-    <div class="p-2 bg-success">Danh Mục Sách</div>
-    
 
-
-
-
-        <a href="?act=taikhoan&xuli=dangxuat">Đăng xuất</a>
-       
-
-
-    <?php  if ((isset($_SESSION['isLogin_Admin'])  == true)) : ?>
-      
-        <h2> Xin chào admin </h2>
-    <?php elseif((isset($_SESSION['isLogin'])  == true)) : ?>
-                 <h2> Xin chào  </h2>
-    <?php else : ?>
-          <a href="?act=taikhoan">Đăng nhập</a>
-    <?php endif ?>
-      
-   
-     
-    
-</div>
-                    <div class="container" style="margin-top:20px ">
-                    <?php         
-                foreach($posts as $post ) :  ?>
-                    <div class="col-3 card" style="margin-top:10px;  display:inline-block">
-				    <img class="card-img-top img-sach" src="./public/<?php echo $post['bookimageurl']?>" alt="Card image" style="width:100%">
-				    <div class="card-body">
-				      <h5 class="card-title"><?php echo $post['bookname']?></h5>
-				      <div class="row" style="margin-left: 0px">
-							<p class="fa fa-star "></p>
-							<p class="fa fa-star "></p>
-							<p class="fa fa-star "></p>
-							<p class="fa fa-star "></p>
-							<p class="fa fa-star "></p>
-						</div>
-				      <p class="card-text">Giá : <?php echo number_format( $post['price'])?>đ                          
-				    <a href="?act=detail&id=<?=$post['bookid']?>" style="margin-left: 15px"class="btn btn-primary stretched-link">Xem chi tiết</a></p>
-				      
-				    </div>
-				</div>     
-                <?php  endforeach ?>
-                </div>
 </body>
 </html>               
        

@@ -32,9 +32,9 @@ class Login extends Model
         }
         
     }
+    
     function logout()
-    {
-       
+    {    
         if(isset($_SESSION['isLogin_Admin'])){
             unset($_SESSION['isLogin_Admin']);
             unset($_SESSION['login']);
@@ -48,7 +48,7 @@ class Login extends Model
     }
     function check_account()
     {
-        $query =  "SELECT * from NguoiDung";
+        $query =  "SELECT * from users";
 
         require("result.php");
 
@@ -58,5 +58,34 @@ class Login extends Model
     function error()
     {
         header('location: ?act=errors');
+    }
+    
+    function dangky_action($data, $check1, $check2)
+    {
+        if ($check1 == 0) {
+            if ($check2 == 0) {
+                $f = "";
+                $v = "";
+                foreach ($data as $key => $value) {
+                    $f .= $key . ",";
+                    $v .= "'" . $value . "',";
+                }
+                $f = trim($f, ",");
+                $v = trim($v, ",");
+                $query = "INSERT INTO users($f) VALUES ($v);";
+
+                $status = $this->conn->query($query);
+                if ($status == true) {
+                    setcookie('msg', 'Đăng ký thành công', time() + 2);
+                } else {
+                    setcookie('msg', 'Đăng ký không thành công', time() + 2);
+                }
+            } else {
+                setcookie('msg', 'Mật khẩu không trùng nhau', time() + 2);
+            }
+        } else {
+            setcookie('msg', 'Tên tài khoản hoặc Email  đã tồn tại', time() + 2);
+        }
+        header('Location: ?act=taikhoan#dangky');
     }
 }

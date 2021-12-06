@@ -2,13 +2,14 @@
 $act = isset($_GET['act']) ? $_GET['act'] : "home";
 switch ($act) { 
     case "home":
-        require_once('BookView.php');
-       
+        require_once('BookView.php');   
         break;
     case "detail":
         require_once("product-detail/product-detail.php");
         break;
-
+    case "category":
+        require_once("shop/shop.php");
+        break;   
     case "taikhoan":
         require_once("login/login.php");
            break;
