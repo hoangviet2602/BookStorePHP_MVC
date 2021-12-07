@@ -23,6 +23,7 @@ class CartController
         }
         require_once('view/index.php');
     }
+   
     function add_cart()
     {
         $id = $_GET['id'];

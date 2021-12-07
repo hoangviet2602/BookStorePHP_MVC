@@ -36,4 +36,14 @@ class Checkout extends Model
         header('location: ?act=checkout');
     }
   }
+  function All()
+    {
+        $query = "select * from orders WHERE userid = ".$_SESSION['login']['userid'];
+
+        require("result.php");
+
+        return $data;
+        
+    }
+    
 }

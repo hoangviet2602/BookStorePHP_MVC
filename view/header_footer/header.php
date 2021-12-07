@@ -28,6 +28,7 @@
                                     <?php  if(isset($_SESSION['login'])){ ?>
                                    
                                     <li><a href="?act=taikhoan&xuli=account">Tài khoản</a></li>
+                                    <li><a href="?act=checkout&xuli=list_ordered">Đơn hàng của bạn</a></li>
                                     <li><a href="?act=taikhoan&xuli=dangxuat">Đăng xuất</a></li>
                                     <?php
                                         if(isset($_SESSION['isLogin_Admin']) ){ ?>

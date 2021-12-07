@@ -80,7 +80,9 @@ switch ($mod) {
                         case 'list':
                             $controller_obj->list();
                             break;
-                            
+                            case 'list_ordered':
+                                $controller_obj->list2();
+                                break;    
                         case 'save':
                             $controller_obj->save();
                             break;

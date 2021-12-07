@@ -25,6 +25,9 @@ switch ($act) {
                 case 'order_complete':
                     require_once("order/order_complete.php");
                     break;
+                case 'list_ordered':
+                    require_once("order/list_ordered.php");
+                    break;
                 default:
                     require_once("order/checkout.php");
                     break;

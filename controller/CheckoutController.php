@@ -25,6 +25,12 @@ class CheckoutController
             header('location: ?act=taikhoan');
         }
     }
+    function list2()
+    {
+        $data = array();
+        $data = $this->checkout_model->All();
+        require_once('view/index.php');
+    }
     function  save()
     {
         date_default_timezone_set('Asia/Ho_Chi_Minh');
