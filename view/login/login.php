@@ -5,10 +5,7 @@
 			<div class="col-xs-12">
 				<div class="pages-title-text text-center">
 					<h2>Đăng nhập</h2>
-					<ul class="text-left">
-						<li><a href="?act=home">Trang chủ</a></li>
-						<li><span> // </span>Đăng nhập</li>
-					</ul>
+					
 				</div>
 			</div>
 		</div>
@@ -32,15 +29,39 @@
 									<strong>Thông báo</strong> <?= $_COOKIE['msg1'] ?>
 								</div>
 							<?php } ?>
-							<form action="?act=taikhoan&xuli=dangnhap" method="post" id="form1">
-								<input type="text" name="username" placeholder="Tài khoản" />
-								<input type="password" name="password" placeholder="Mật khẩu" />
-								<a class="forget" href="#">Quên mật khẩu?</a>
-								<div class="submit-text">
-									<button name="submit" type="submit" form="form1">Đăng nhập</button>
-								</div>
-							</form>
+
+							<div class="modal-body">
+                    <form action="?act=taikhoan&xuli=dangnhap" method="post" id="form1">
+                        <div class="form-label-group">
+                            <input type="text" class="form-control" placeholder="Nhập địa chỉ email" name="username"
+                                required autofocus>
+                        </div>
+
+                        <div class="form-label-group">
+                            <input type="password" class="form-control" placeholder="Mật khẩu" name="password" required>
+                        </div>
+
+                        <div class="custom-control custom-checkbox mb-3">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="custom-control-label" for="customCheck1">Nhớ mật khẩu</label>
+                            <a href="#" class="float-right text-decoration-none" style="color: #F5A623">Quên mật
+                                khẩu</a>
+                        </div>
+
+                        <button class="btn btn-lg btn-block btn-signin text-uppercase text-white" type="submit" form="form1" name="submit" 
+                            style="background: #F5A623">Đăng nhập</button>
+                        <hr class="my-4">
+                        <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i
+                                class="fab fa-google mr-2"></i> Đăng nhập bằng Google</button>
+                        <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i
+                                class="fab fa-facebook-f mr-2"></i> Đăng nhập bằng Facebook</button>
+                    </form>
+                	</div>
+							
 						</div>
+
+					
+
 					</div>
 				</div>
 			</div>
@@ -63,10 +84,16 @@
 							<input type="password" name="password" placeholder="Mật khẩu" minlength="6" required />
 							<input type="password" name="check_password" placeholder="Xác nhận mật khẩu" minlength="6" required />
 							<div class="submit-text coupon">
-								<button type="submit" form="form2">Đăng ký</button>
+								
+								<button class="btn btn-lg btn-block btn-signin text-uppercase text-white mt-3" type="submit" form="form2"
+                            style="background: #F5A623">Đăng ký</button>
 							</div>
 						</form>
 					</div>
+
+						
+
+
 				</div>
 			</div>
 		</div>

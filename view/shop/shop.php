@@ -36,8 +36,8 @@
     <section class="breadcrumbbar">
         <div class="container">
             <ol class="breadcrumb mb-0 p-0 bg-transparent">
-                <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
-                <li class="breadcrumb-item active"><a href="sach-kinh-te.html">Sách kinh tế - kỹ năng</a></li>
+               <!--   <li class="breadcrumb-item"><a href="index.html">Sách</a></li>-->
+                
             </ol>
         </div>
     </section>
@@ -66,6 +66,7 @@
                 <!-- các sản phẩm  -->
                 <div class="items">
                     <div class="row">
+                    
                     <?php if(isset($value))  { ?>
                         <?php foreach($value as $row) { ?>
                             <div class="col-lg-3 col-md-4 col-xs-6 item DeanGraziosi">

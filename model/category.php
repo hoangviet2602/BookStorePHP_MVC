@@ -17,6 +17,20 @@ class Category extends Model
         
     }
 
+    public function find_sp($id)
+    {
+        $query =  "SELECT * from books where bookname LIKE '%". $id."%'" ;
+        $result = $this->conn->query($query);
+
+        $categories = array();
+        while($post = mysqli_fetch_assoc($result)){
+
+            $categories[] = $post;
+        } 
+        
+        return $categories;
+        
+    }
     public function getcategory($id){
         $con = mysqli_connect('localhost','root','','bansach2');
         mysqli_set_charset($con,'utf-8');

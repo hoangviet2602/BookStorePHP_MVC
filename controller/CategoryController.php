@@ -15,7 +15,18 @@ class CategoryController
         $id = $_GET['id'];
         $value = $this->category_model->detail_sp($id);
       
-            require_once('view/shop/shop.php');
+        require_once('view/shop/shop.php');
+    }
+    function list2()
+    {
+        
+        if (isset($_POST['keyword'])) {
+
+            $id = $_POST['keyword'];
+            $value = $this->category_model->find_sp($id);
+
+        require_once('view/shop/shop.php');
     }
    
+}
 }

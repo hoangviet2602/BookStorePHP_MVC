@@ -5,10 +5,6 @@
 			<div class="col-xs-12">
 				<div class="pages-title-text text-center">
 					<h2>Thanh Toán</h2>
-					<ul class="text-left">
-						<li><a href="index.php?act=home">Trang chủ</a></li>
-						<li><span> // </span>Thanh Toán</li>
-					</ul>
 				</div>
 			</div>
 		</div>
@@ -32,7 +28,9 @@
 							<input type="text" name="address" placeholder="Đại chỉ giao hàng" required  value="<?=$_SESSION['login']['address']?>"/>
 							</br>
 							<div class="submit-text">
-								<button type="submit">Thanh toán</button>
+							<button type="submit" class="btn" style="background-color: #CF111A; color: white;margin-left:10px">
+                                <i>Thanh toán</i>
+                            </button>
 							</div>
 						</form>
 					</div>

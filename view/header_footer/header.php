@@ -15,11 +15,7 @@
         <div class="container text-center">
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="middel-top">
-                        <div class="left floatleft">
-                            <p><i class="mdi mdi-clock"></i> T2 - CN : 08:00-19:00</p>
-                        </div>
-                    </div>
+                   
                     <div class="middel-top clearfix">
                         <ul class="clearfix right floatright">
                             <li>
@@ -33,17 +29,21 @@
                                     <?php
                                         if(isset($_SESSION['isLogin_Admin']) ){ ?>
                                         <li><a href="admin/?mod=login">Trang quản lý</a></li>
+                                        
                                   <?php }}else{ ?>
                                     <li><b>Khách hàng</b></li>
                                     <li><a href="?act=taikhoan">Đăng nhập</a></li>
+                                    
                                     <?php } ?>
                                 </ul>
                             </li>
                         </ul>
                         <div class="right floatright widthfull">
-                            <form action="?act=shop" method="post">
-                                <button type="submit"><i class="mdi mdi-magnify"></i></button>
-                                <input type="text" placeholder="Tìm kiếm..." name="keyword"/>
+                            <form action="?act=category2" method="post">
+                            <button type="submit" class="btn" style="background-color: #CF111A; color: white;margin-left:10px">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            <input type="text" placeholder="Tìm kiếm..." name="keyword" />
                             </form>
                         </div>
                     </div>
@@ -55,7 +55,7 @@
         <div class="row">
             <div class="col-sm-2">
                 <div class="logo">
-                <a href="?act=home"  style="margin-left: 50px "><img src="./public/img/Capture.PNG" alt="Sellshop" /></a>
+                <a href="?act=home"   ><img src="./public/img/Capture.PNG" alt="Sellshop" /></a>
                 </div>
             </div>
             <div class="col-sm-8">
@@ -65,13 +65,13 @@
                             <ul style="margin-left:-40px ">
                             <li><a href= style="color : white " >.</a></li>
                                 <li><a href="?act=home" >Trang chủ</a></li>
-                                <li><a href="?act=category">Danh Mục</a>
+                                <li><a href="">Danh Mục</a>
                                 </li>
                                 <li>
                                     <a href="?act=checkout">Thanh Toán</a>
                                 </li>
-                                <li><a href="?act=about">Giới thiệu</a></li>
-                                <li><a href="?act=contact">Liên hệ</a></li>
+                                <li><a href="">Giới thiệu</a></li>
+                                <li><a href="">Liên hệ</a></li>
                             </ul>
                         </nav>
                     </div>              
@@ -110,7 +110,7 @@
                         <div class="total">
                             <span>Tổng <strong>= <?=number_format($thanhtien)?> VNĐ</strong></span>
                         </div>
-                        <a class="goto" href="index.php?act=cart">Đến giỏ hàng</a>
+                        
                         <a class="out-menu" href="index.php?act=checkout">Thanh toán</a>
                     </div>
                 </div>

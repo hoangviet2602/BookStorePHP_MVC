@@ -4,11 +4,7 @@
 		<div class="row">
 			<div class="col-xs-12">
 				<div class="pages-title-text text-center">
-					<h2>Giỏ Hàng</h2>
-					<ul class="text-left">
-						<li><a href="?act=home">Trang chủ</a></li>
-						<li><span> // </span>Giỏ Hàng</li>
-					</ul>
+					<h2>Giỏ Hàng</h2>		
 				</div>
 			</div>
 		</div>
@@ -85,7 +81,7 @@
 			</div>
 		</div>
 		<div class="row margin-top">
-			<div class="col-sm-6">
+			<div class="col-sm-12">
 				<div class="single-cart-form padding60">
 					<div class="log-title">
 						<h3><strong>Chi tiết thanh toán</strong></h3>
@@ -119,27 +115,17 @@
 								</tfoot>
 							</table>
 							<div class="submit-text coupon">
-								<button type="submit">Đặt hàng</button>
+								
+								<button type="submit" class="btn" style="background-color: #CF111A; color: white;margin-left:10px">
+                                <i >Đặt hàng</i>
+                            </button>
 							</div>
 						</form>
 					</div>
 				</div>
 			</div>
 			<div class="col-sm-6">
-				<div class="single-cart-form padding60">
-					<div class="log-title">
-						<h3><strong>Mã giảm giá</strong></h3>
-					</div>
-					<div class="cart-form-text custom-input">
-						<p>Nhập mã giảm giá nếu bạn có !!</p>
-						<form action="" method="post">
-							<input type="text" name="subject" placeholder="Nhập mã tại đây..." />
-							<div class="submit-text coupon">
-								<button type="submit">Áp dụng</button>
-							</div>
-						</form>
-					</div>
-				</div>
+			
 			</div>
 		</div>
 	</div>

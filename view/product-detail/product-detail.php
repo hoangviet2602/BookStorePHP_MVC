@@ -42,19 +42,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="quick-thumb">
-                                <ul class="product-slider">
-                                    <?php if ($data['bookimageurl'] != null) { ?>
-                                        <li class="active"><a data-toggle="tab" href="#sin-1"> <img src="public/<?= $data['bookimageurl'] ?>" alt="quick view" /> </a></li>
-                                    <?php } ?>
-                                    <?php if ($data['bookimageurl'] != null) { ?>
-                                        <li><a data-toggle="tab" href="#sin-2"> <img src="public/<?= $data['bookimageurl'] ?>" alt="small image" /> </a></li>
-                                    <?php } ?>
-                                    <?php if ($data['bookimageurl'] != null) { ?>
-                                        <li><a data-toggle="tab" href="#sin-3"> <img src="public/<?= $data['bookimageurl'] ?>" alt="small image" /> </a></li>
-                                    <?php } ?>
-                                </ul>
-                            </div>
+                        
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-7 col-md-8">
@@ -71,17 +59,19 @@
                                 </div>
                                 <h5><?=number_format($data['price'])?> VNĐ</h5>
                                 <h3>Tác giả: <?=($data_tg['authorname'])?> </h3>
-                                    </br>  
+                                    </br> 
+                                     
                                     <p><?= $data['bookdescription'] ?></p>                             
                                 <div class="list-btn">
                                 <?php if ($data['quantity'] > 1){ ?>
-                                    <a href="?act=cart&xuli=add&id=<?=$data['bookid']?>">Thêm vào giỏ</a>
+                                    <a href="?act=cart&xuli=add&id=<?=$data['bookid']?>">Thêm vào giỏ</a> 
+                                    
                                     <?php }else { ?>
                                     <a href="">Hết hàng</a>
                                 <?php } ?>
                                   
                                    
-                                    <a href="#info">Chi tiết</a>
+                                 
                                   
                                 </div>
                             </div>
@@ -96,9 +86,9 @@
                     <div class="reviews padding60 margin-top">
                         <ul class="reviews-tab clearfix" id="info">
                             <?php if ($data['categoryid'] == 1) { ?>
-                                <li class="active"><a data-toggle="tab" href="#moreinfo">Đặc điểm</a></li>
+                                <li class="active"><a data-toggle="tab" href="#moreinfo">Thông tin sách</a></li>
                             <?php } ?>
-                            <li><a data-toggle="tab" href="#reviews">Đánh giá</a></li>
+                        
                         </ul>
                         <div class="tab-content">
                           

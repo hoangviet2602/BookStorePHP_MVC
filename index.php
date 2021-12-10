@@ -16,11 +16,16 @@ switch ($mod) {
         $controller_obj = new DetailController();
         $controller_obj->list();
         break;
-        case 'category1':
+    case 'category1':
+        require_once('controller/CategoryController.php');
+        $controller_obj = new CategoryController();
+        $controller_obj->list();
+        break; 
+        case 'category2':
             require_once('controller/CategoryController.php');
             $controller_obj = new CategoryController();
-            $controller_obj->list();
-            break;   
+            $controller_obj->list2();
+            break;      
     
     case 'taikhoan':
         $act = isset($_GET['xuli']) ? $_GET['xuli'] : "taikhoan";
