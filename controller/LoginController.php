@@ -32,7 +32,13 @@ class LoginController
         
         $this->login_model->logout();
     }
+    function account()
+    {
+        
+        $data = $this->login_model->account();
 
+        require_once('view/index.php');
+    }
     function dangky(){
         $check1 = 0; //check trung ten va email
         $check2 = 0;//check mat khau giong nhau
@@ -72,4 +78,5 @@ class LoginController
 
         $this->login_model->dangky_action($data, $check1, $check2);
     }
+    
 }

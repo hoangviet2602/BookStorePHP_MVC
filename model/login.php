@@ -59,7 +59,11 @@ class Login extends Model
     {
         header('location: ?act=errors');
     }
-    
+    function account()
+    {
+        $id = $_SESSION['login']['userid'];
+        return $this->conn->query("SELECT * from users where userid = $id")->fetch_assoc();
+    }
     function dangky_action($data, $check1, $check2)
     {
         if ($check1 == 0) {

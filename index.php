@@ -41,7 +41,9 @@ switch ($mod) {
                  case 'dangxuat':
                         $controller_obj->dangxuat();
                         break;
-                 
+                  case 'account':
+                        $controller_obj->account();
+                         break;
                 case 'dangky':
                         $controller_obj->dangky();
                         break;

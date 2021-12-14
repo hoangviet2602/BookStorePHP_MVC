@@ -11,8 +11,19 @@ switch ($act) {
         require_once("shop/shop.php");
         break;   
     case "taikhoan":
-        require_once("login/login.php");
-           break;
+        $act = isset($_GET['xuli']) ? $_GET['xuli'] : "login";
+            switch ($act) {
+                case 'login':
+                    require_once("login/login.php");
+                    break;
+                case 'account':
+                    require_once("login/my-account.php");
+                    break;
+                default:
+                    require_once("login/login.php");
+                    break;
+            }
+        break;
     case "cart":
         require_once("cart/cart.php");
         break;      
