@@ -47,7 +47,9 @@ switch ($mod) {
                 case 'dangky':
                         $controller_obj->dangky();
                         break;
-               
+                case 'update':
+                    $controller_obj->update();
+                    break;
                  
                 default:
                     $controller_obj->login();

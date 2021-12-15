@@ -78,5 +78,24 @@ class LoginController
 
         $this->login_model->dangky_action($data, $check1, $check2);
     }
+
+   function update(){
+    if (isset($_POST['fullname'])) {
+        $data = array(
+            'fullname' => $_POST['fullname'],
+            'phone' => $_POST['phone'],
+            'email' =>    $_POST['email'],
+            'address' => $_POST['address'],
+        );
+        foreach ($data as $key => $value) {
+            if (strpos($value, "'") != false) {
+                $value = str_replace("'", "\'", $value);
+                $data[$key] = $value;
+            }
+        }
+        $this->login_model->update_account($data);
+        }
     
+    }
+
 }

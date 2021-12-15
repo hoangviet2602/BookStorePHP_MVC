@@ -92,4 +92,27 @@ class Login extends Model
         }
         header('Location: ?act=taikhoan#dangky');
     }
+
+
+    //hàm update
+    function update_account($data)
+    {
+        $v = "";
+        foreach ($data as $key => $value) {
+            $v .= $key . "='" . $value . "',";
+        }
+        $v = trim($v, ",");
+
+        $query = "UPDATE users SET  $v   WHERE  userid = " . $_SESSION['login']['userid'];
+
+        $result = $this->conn->query($query);
+        
+        if ($result == true) {
+            setcookie('doimk', 'Cập nhật tài khoản thành công', time() + 2);
+            header('Location: ?act=taikhoan&xuli=account#doitk');
+        } else{
+            setcookie('doimk', 'Cập nhật tài khoản thất bại', time() + 2);
+            header('Location: ?act=taikhoan&xuli=account#doitk');
+        }
+    }
 }
