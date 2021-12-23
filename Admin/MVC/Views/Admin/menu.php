@@ -1,12 +1,11 @@
  <!-- Sidebar -->
- <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+ <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar"
+ style="background-image: linear-gradient(180deg,#CF111A 10%,#3399FF);">
 
 <!-- Sidebar - Brand -->
 <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
-  <div class="sidebar-brand-icon rotate-n-15">
-    <i class="fas fa-laugh-wink"></i>
-  </div>
-  <div class="sidebar-brand-text mx-3">Book<sup>Store</sup></div>
+ 
+  <div class="sidebar-brand-text mx-3">BookStore</sup></div>
 </a>
 
 <!-- Divider -->
@@ -15,14 +14,12 @@
 <!-- Divider -->
 <hr class="sidebar-divider">
 
-<!-- Heading -->
-<div class="sidebar-heading">
-  Chức năng
-</div>
+
+
 
 <!-- Nav Item - Charts -->
 <?php if (isset($_SESSION['isLogin_Admin']) && $_SESSION['isLogin_Admin'] == true) { ?>
-<li class="nav-item">
+<li class="nav-item" >
   <a class="nav-link" href="?mod=nguoidung">
     <i class="fas fa-fw fa-table"></i>
     <span>Quản lý Tài khoản</span></a>
@@ -49,10 +46,7 @@
 
 
 
-<!-- Sidebar Toggler (Sidebar) -->
-<div class="text-center d-none d-md-inline">
-  <button class="rounded-circle border-0" id="sidebarToggle"></button>
-</div>
+
 
 </ul>
 <!-- End of Sidebar -->

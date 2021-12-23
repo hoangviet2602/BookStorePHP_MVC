@@ -19,7 +19,7 @@
 			<div class="col-sm-6">
 				<div class="main-input padding60" id="dangnhap">
 					<div class="log-title">
-						<h3><strong>Khách hàng đã đăng ký</strong></h3>
+						<h3><strong>Đăng Nhập</strong></h3>
 					</div>
 					<div class="login-text">
 						<div class="custom-input">
@@ -68,7 +68,7 @@
 			<div class="col-sm-6">
 				<div class="main-input padding60 new-customer" id="dangky">
 					<div class="log-title">
-						<h3><strong>Khách hàng mới</strong></h3>
+						<h3><strong>đăng kí</strong></h3>
 					</div>
 					<?php if (isset($_COOKIE['msg'])) { ?>
 						<div class="alert alert-success">

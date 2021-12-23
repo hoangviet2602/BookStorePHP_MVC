@@ -57,7 +57,6 @@ class NguoiDungController
         $id = isset($_GET['id']) ? $_GET['id'] : 1;
         $data = $this->nguoidung_model->find($id);
         require_once("MVC/Views/Admin/index.php");
-        //require_once("MVC/Views/authors/edit.php");
     }
     public function update()
     {

@@ -8,7 +8,9 @@
                 echo 'Connect error: ' .mysqli_connect_error();
             }
 
-            $result = $con -> query('SELECT * FROM books WHERE booktype = 1');
+            $result = $con -> query('SELECT b.*,t.*
+            FROM books as b , authors as t
+            WHERE booktype = 1 AND b.authorid = t.authorid');
 
             $posts = array();
 
@@ -29,7 +31,9 @@
                 echo 'Connect error: ' .mysqli_connect_error();
             }
 
-            $result = $con -> query('SELECT * FROM books WHERE booktype = 4');
+            $result = $con -> query('SELECT b.*,t.*
+            FROM books as b , authors as t
+            WHERE booktype = 4 AND b.authorid = t.authorid');
 
             $posts2 = array();
 
@@ -49,7 +53,9 @@
                 echo 'Connect error: ' .mysqli_connect_error();
             }
 
-            $result = $con -> query('SELECT * FROM books WHERE booktype = 3');
+            $result = $con -> query('SELECT b.*,t.*
+            FROM books as b , authors as t
+            WHERE booktype = 3 AND b.authorid = t.authorid');
 
             $posts3 = array();
 
@@ -70,7 +76,9 @@
                 echo 'Connect error: ' .mysqli_connect_error();
             }
 
-            $result = $con -> query('SELECT * FROM books WHERE booktype = 2');
+            $result = $con -> query('SELECT b.*,t.*
+            FROM books as b , authors as t
+            WHERE booktype = 2 AND b.authorid = t.authorid');
 
             $posts4 = array();
 

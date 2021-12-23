@@ -29,8 +29,8 @@
 							</br>
 							<div class="submit-text">
 							<button type="submit" class="btn" style="background-color: #CF111A; color: white;margin-left:10px">
-                                <i>Thanh toán</i>
-                            </button>
+                                							<i>Thanh toán</i>
+                    									</button>
 							</div>
 						</form>
 					</div>
@@ -58,16 +58,13 @@
 								</tr>
 						<?php }
 								} ?>
-						<tr>
-							<th>Giảm Giá</th>
-							<td>0%</td>
-						</tr>
+						
 						<tr>
 							<th>Vận Chuyển</th>
 							<td>15,000 VNĐ</td>
 						</tr>
 						<tr>
-							<th>Vat</th>
+							<th>Thuế VAT</th>
 							<td>0</td>
 						</tr>
 							</tbody>

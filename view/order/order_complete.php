@@ -5,10 +5,7 @@
 			<div class="col-xs-12">
 				<div class="pages-title-text text-center">
 					<h2>Order Complete</h2>
-					<ul class="text-left">
-						<li><a href="index.php?act=home">Trang chủ</a></li>
-						<li><span> // </span>HOÀN THÀNH ĐƠN HÀNG</li>
-					</ul>
+					
 				</div>
 			</div>
 		</div>
@@ -21,7 +18,7 @@
 		<div class="row">
 			<div class="col-xs-12 text-center">
 				<div class="complete-title">
-					<p>Cảm ơn bạn. Đơn đặt hàng của bạn đã được nhận; Đã nhận được đơn đặt hàng của bạn.</p>
+					<p>Đặt Hàng Thành Công</p>
 					<p>Vui Lòng Chờ Xét Duyệt</p>
 				</div>
 			</div>
@@ -74,17 +71,14 @@
 							<li><span>Tên KH:<strong>:</strong></span> <?=$_SESSION['login']['fullname']?></li>
 							<li><span>Email<strong>:</strong></span> <?=$_SESSION['login']['email']?></li>
 							<li><span>Số ĐT<strong>:</strong></span> <?=$_SESSION['login']['phone']?></li>
+
+							<li><span>Địa Chỉ<strong>:</strong></span><?=$_SESSION['login']['address']?></li>
+							<li><span>Email<strong>:</strong></span> <?=$_SESSION['login']['email']?></li>
+							
 						</ul>
 					</div>
 				</div>
-				<div class="order-address bill padding60">
-					<div class="log-title">
-						<h3><strong>ĐỊA CHỈ THANH TOÁN</strong></h3>
-					</div>
-					<p><?=$_SESSION['login']['address']?></p>
-					<p>Phone: <?=$_SESSION['login']['phone']?></p>
-					<p>Email: <?=$_SESSION['login']['email']?></p>
-				</div>
+				
 			</div>
 		</div>
 	</div>

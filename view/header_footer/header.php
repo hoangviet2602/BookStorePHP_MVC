@@ -62,16 +62,16 @@
                 <div class="header-middel">
                     <div class="mainmenu">
                         <nav>
-                            <ul style="margin-left:-40px ">
+                            <ul style="margin-left:50px ">
                             <li><a href= style="color : white " >.</a></li>
                                 <li><a href="?act=home" >Trang chủ</a></li>
-                                <li><a href="">Danh Mục</a>
+                                <li><a >Danh Mục</a>
                                 </li>
                                 <li>
                                     <a href="?act=checkout">Thanh Toán</a>
                                 </li>
-                                <li><a href="">Giới thiệu</a></li>
-                                <li><a href="">Liên hệ</a></li>
+                                <li><a >Giới thiệu</a></li>
+                                
                             </ul>
                         </nav>
                     </div>              
@@ -90,7 +90,7 @@
                             }}
                         ?>
                         <i class="mdi mdi-cart"></i>
-                         <strong><?=number_format($thanhtien)?> VNĐ</strong>
+                         <strong style="color: white;"><?=number_format($thanhtien)?> VNĐ</strong>
                     </a>
                     <div class="cartdrop">
                         <?php if(isset($_SESSION['sanpham'])){
@@ -107,11 +107,9 @@
                             </div>
                         </div>
                             <?php }} ?>
-                        <div class="total">
-                            <span>Tổng <strong>= <?=number_format($thanhtien)?> VNĐ</strong></span>
-                        </div>
                         
-                        <a class="out-menu" href="index.php?act=checkout">Thanh toán</a>
+                        
+                       
                     </div>
                 </div>
             </div>

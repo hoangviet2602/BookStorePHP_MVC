@@ -106,12 +106,11 @@
                     <div class="card">
                         <a href="?act=detail&id=<?=$post['bookid']?>" class="motsanpham"
                             style="text-decoration: none; color: black;" data-toggle="tooltip" data-placement="bottom"
-                            title="Lập Kế Hoạch Kinh Doanh Hiệu Quả">
-                            <img class="card-img-top anh" src="public/<?=$post['bookimageurl']?>"
-                                alt="lap-ke-hoach-kinh-doanh-hieu-qua">
+                            title="<?=$post['bookname']?>">
+                            <img class="card-img-top anh" src="public/<?=$post['bookimageurl']?>" >
                             <div class="card-body noidungsp mt-3">
                                 <h3 class="card-title ten"><?=$post['bookname']?></h3>
-                                <small class="tacgia text-muted">Brian Finch</small>
+                                <small class="tacgia text-muted"><?=$post['authorname']?></small>
                                 <div class="gia d-flex align-items-baseline">
                                     <div class="giamoi"><?=number_format($post['price'])?> ₫</div>
                                     <div class="giacu text-muted">139.000 ₫</div>
@@ -164,7 +163,7 @@
                                 alt="lap-ke-hoach-kinh-doanh-hieu-qua">
                             <div class="card-body noidungsp mt-3">
                                 <h3 class="card-title ten"><?=$post['bookname']?></h3>
-                                <small class="tacgia text-muted">Brian Finch</small>
+                                <small class="tacgia text-muted"><?=$post['authorname']?></small>
                                 <div class="gia d-flex align-items-baseline">
                                     <div class="giamoi"><?=number_format($post['price'])?> ₫</div>
                                     <div class="giacu text-muted">139.000 ₫</div>
@@ -213,7 +212,7 @@
                                 alt="lap-ke-hoach-kinh-doanh-hieu-qua">
                             <div class="card-body noidungsp mt-3">
                                 <h3 class="card-title ten"><?=$post['bookname']?></h3>
-                                <small class="tacgia text-muted">Brian Finch</small>
+                                <small class="tacgia text-muted"><?=$post['authorname']?></small>
                                 <div class="gia d-flex align-items-baseline">
                                     <div class="giamoi"><?=number_format($post['price'])?> ₫</div>
                                     <div class="giacu text-muted">139.000 ₫</div>
@@ -253,11 +252,11 @@
                     <?php foreach ($posts2 as  $post) { ?>  
                         <div class="col-lg col-sm-4">
                         <div class="card">
-                            <a href="#" class="motsanpham" style="text-decoration: none; color: black;"
+                            <a href="" class="motsanpham" style="text-decoration: none; color: black;"
                                 data-toggle="tooltip" data-placement="bottom"
-                                title="Từng bước chân nở hoa: Khi câu kinh bước tới">
+                                title="<?=$post['bookname']?>">
                                 <img class="card-img-top anh" src="public/<?=$post['bookimageurl']?>"
-                                    alt="tung-buoc-chan-no-hoa">
+                                    >
                                 <div class="card-body noidungsp mt-3">
                                     <h3 class="card-title ten"><?=$post['bookname']?></h3>
                                     <small class="thoigian text-muted"><?=$post['releasedate']?></small>

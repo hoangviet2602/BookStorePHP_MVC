@@ -17,9 +17,9 @@
 		<div class="row">
 			<div class="col-xs-12">
 				<div class="table-responsive padding60">
-					<table class="wishlist-table text-center" id="dxd">
-						<thead>
-							<tr>
+					<table class="wishlist-table text-center" id="dxd" >
+						<thead style="background-color: #CF111A;">
+							<tr >
 								<th>Sản phẩm</th>
 								<th>Giá</th>
 								<th>Số lượng</th>
@@ -52,7 +52,7 @@
 										<td>
 											<strong><?= number_format($value['ThanhTien']) ?> VNĐ</strong>
 										</td>
-										<td><a href="?act=cart&xuli=deleteall&id=<?= $value['bookid'] ?>"><i class="mdi mdi-close" title="Remove this product"></i></td>
+										<td><a href="?act=cart&xuli=delete&id=<?= $value['bookid'] ?>"><i class="mdi mdi-close" title="Remove this product"></i></td>
 											
 											
 									</tr>
@@ -94,16 +94,13 @@
 										<th>Tổng Giỏ Hàng</th>
 										<td><?= number_format($count) ?> VNĐ</td>
 									</tr>
-									<tr>
-										<th>Giảm giá</th>
-										<td>0%</td>
-									</tr>
+									
 									<tr>
 										<th>Vận Chuyển</th>
 										<td>15,000 VNĐ</td>
 									</tr>
 									<tr>
-										<th>Vat</th>
+										<th>Thuế VAT</th>
 										<td>0 VNĐ</td>
 									</tr>
 								</tbody>

@@ -14,9 +14,6 @@ class HoaDonController
         $data = array();
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
-          //  if ($id > 1) {
-          //      $id = 0;
-          //  }
             $data = $this->hoadon_model->trangthai($id);
         } else {
             $data = $this->hoadon_model->All();

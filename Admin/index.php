@@ -121,17 +121,14 @@ session_start();
         
             
         default:
-        if($mod = 'danhmmuc')
-            header('location: ?mod=danhmuc');
-        else
-            header('location: ?mod=sanpham');
-      
-        
-      
-            // require_once('MVC/controllers/LoginController.php');
-            // $controller_obj = new LoginController();
-            // $controller_obj->admin();
-            // break;
+            if($mod == 'orders')
+                header('location: ?mod=hoadon');
+            else if($mod == 'categories')
+                header('location: ?mod=danhmuc');
+            else if($mod == 'books')
+                header('location: ?mod=sanpham');
+            else    
+                header('location: ?mod=nguoidung');
     }
 
 

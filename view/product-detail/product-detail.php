@@ -64,7 +64,10 @@
                                     <p><?= $data['bookdescription'] ?></p>                             
                                 <div class="list-btn">
                                 <?php if ($data['quantity'] > 1){ ?>
+
+                                    <button type="submit" class="btn" style="background-color: #CF111A; color: white;margin-left:10px">
                                     <a href="?act=cart&xuli=add&id=<?=$data['bookid']?>">Thêm vào giỏ</a> 
+                    				</button>
                                     
                                     <?php }else { ?>
                                     <a href="">Hết hàng</a>

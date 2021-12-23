@@ -29,18 +29,16 @@ class SanphamController
     }
     public function store()
     {   
-        $target_dir = "../public/img/products/";  // thư mục chứa file upload
+        $target_dir = "../public/img/products/";  
 
         $HinhAnh1 = "";
-        $target_file = $target_dir . basename($_FILES["HinhAnh1"]["name"]); // link sẽ upload file lên
+        $target_file = $target_dir . basename($_FILES["HinhAnh1"]["name"]); 
 
         $status_upload = move_uploaded_file($_FILES["HinhAnh1"]["tmp_name"], $target_file);
 
-        if ($status_upload) { // nếu upload file không có lỗi 
+        if ($status_upload) { 
             $HinhAnh1 = "img/products/" .basename($_FILES["HinhAnh1"]["name"]);
         }
-
-     
         date_default_timezone_set('Asia/Ho_Chi_Minh');
         $ThoiGian =  date('Y-m-d H:i:s');
         $data = array(  
@@ -58,8 +56,7 @@ class SanphamController
             'price' => $_POST['price'],
             'timestamp' => $ThoiGian,
             'publisher' =>$_POST['publisher'],
-            'bookbinding' =>$_POST['bookbinding']
-            
+            'bookbinding' =>$_POST['bookbinding']           
         );
         foreach ($data as $key => $value) {
             if (strpos($value, "'") != false) {
@@ -67,10 +64,8 @@ class SanphamController
                 $data[$key] = $value;
             }
         }
-
         $this->sanpham_model->store($data);
     }
-
     public function delete()
     {
         $id = $_GET['id'];
@@ -88,7 +83,6 @@ class SanphamController
     }
     public function update()
     {
-
         $target_dir = "../public/img/products/";  // thư mục chứa file upload
 
         $HinhAnh1 = "";
@@ -127,8 +121,7 @@ class SanphamController
         }
         if ($HinhAnh1 == "") {
             unset($data['bookimageurl']);
-        }
-       
+        }     
         $this->sanpham_model->update($data);
     }
 }

@@ -24,7 +24,7 @@
 					<table class="wishlist-table text-center" id="dxd">
 						<thead>
 							<tr>
-								<th>STT</th>
+								<th>Mã Đơn Hàng</th>
 								<th>Ngày đặt</th>
 								<th>Tổng tiền</th>						
                                 <th>Số điện thoại liên hệ</th>

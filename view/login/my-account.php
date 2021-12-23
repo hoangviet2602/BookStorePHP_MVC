@@ -5,10 +5,7 @@
 			<div class="col-xs-12">
 				<div class="pages-title-text text-center">
 					<h2>Thông tin tài khoản</h2>
-					<ul class="text-left">
-						<li><a href="index.php?act=home">Trang chủ</a></li>
-						<li><span> // </span>Tài khoản</li>
-					</ul>
+					
 				</div>
 			</div>
 		</div>
@@ -27,12 +24,7 @@
 					<div class="prament-area main-input" id="doitk">
 						<ul class="panel-group" id="accordion">
 							<li class="panel">
-								<div class="account-title" data-toggle="collapse" data-parent="#accordion" data-target="#collapse1">
-									<label>
-										<input type="radio" checked value="forever" name="rememberme" />
-										Thông tin cá nhân
-									</label>
-								</div>
+								
 								<div id="collapse1" class="panel-collapse collapse in">
 									<div class="single-log-info">
 										<div class="bulling-title">
@@ -54,7 +46,10 @@
 													<input type="text" name="phone" placeholder="Số điện thoại.." required pattern="[0-9]+" minlength="10" value="<?= $data['phone'] ?>" />
 													<input type="text" name="address" placeholder="Địa chỉ.." required value="<?= $data['address'] ?>" />
 													<div class="submit-text">
-														<button type="submit_tt">Lưu</button>
+														
+														<button type="submit" class="btn" style="background-color: #CF111A; color: white;margin-left:10px">
+                                							<i>Lưu</i>
+                    									</button>
 													</div>
 												</form>
 											</div>
