@@ -50,7 +50,7 @@
                             <div class="list-text">
                                 <h3><?= $data['bookname'] ?></h3>
                                 <div class="ratting floatright">
-                                    <p>( 27 Rating )</p>
+                                    
                                     <i class="mdi mdi-star"></i>
                                     <i class="mdi mdi-star"></i>
                                     <i class="mdi mdi-star"></i>

@@ -216,7 +216,7 @@
                                 <div class="gia d-flex align-items-baseline">
                                     <div class="giamoi"><?=number_format($post['price'])?> ₫</div>
                                     <div class="giacu text-muted">139.000 ₫</div>
-                                    <div class="sale">-20%</div>   
+                                       
                                 </div>
                                 <div class="danhgia">
                                     <ul class="d-flex" style="list-style: none;">
@@ -225,7 +225,7 @@
                                         <li class="active"><i class="fa fa-star"></i></li>
                                         <li class="active"><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
-                                        <li><span class="text-muted">0 nhận xét</span></li>
+                                        
                                     </ul>
                                 </div>             </div>
                         </a>
