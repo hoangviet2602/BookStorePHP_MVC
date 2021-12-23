@@ -95,10 +95,7 @@
 										<td><?= number_format($count) ?> VNĐ</td>
 									</tr>
 									
-									<tr>
-										<th>Vận Chuyển</th>
-										<td>15,000 VNĐ</td>
-									</tr>
+									
 									<tr>
 										<th>Thuế VAT</th>
 										<td>0 VNĐ</td>
@@ -107,7 +104,7 @@
 								<tfoot>
 									<tr>
 										<th class="tfoot-padd">Tổng tiền</th>
-										<td class="tfoot-padd"><?=number_format($count+15000)?> VNĐ</td>
+										<td class="tfoot-padd"><?=number_format($count)?> VNĐ</td>
 									</tr>
 								</tfoot>
 							</table>

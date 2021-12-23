@@ -59,10 +59,7 @@
 						<?php }
 								} ?>
 						
-						<tr>
-							<th>Vận Chuyển</th>
-							<td>15,000 VNĐ</td>
-						</tr>
+						
 						<tr>
 							<th>Thuế VAT</th>
 							<td>0</td>
@@ -71,7 +68,7 @@
 							<tfoot>
 								<tr>
 									<th>Tổng</th>
-									<td><?= number_format($count + 15000) ?> VNĐ</td>
+									<td><?= number_format($count ) ?> VNĐ</td>
 								</tr>
 							</tfoot>
 						</table>

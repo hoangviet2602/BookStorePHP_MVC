@@ -51,10 +51,7 @@
                         <button class="btn btn-lg btn-block btn-signin text-uppercase text-white" type="submit" form="form1" name="submit" 
                             style="background: #F5A623">Đăng nhập</button>
                         <hr class="my-4">
-                        <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i
-                                class="fab fa-google mr-2"></i> Đăng nhập bằng Google</button>
-                        <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i
-                                class="fab fa-facebook-f mr-2"></i> Đăng nhập bằng Facebook</button>
+                        
                     </form>
                 	</div>
 							
